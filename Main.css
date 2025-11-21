@@ -2,7 +2,6 @@
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
-  /* border: 2px solid red; */
   font-family: poppins-regular;
 }
 
@@ -112,10 +111,11 @@ img {
   color: var(--gold-finger);
   font-size: 2.5rem;
 }
+
 .head {
   background-color: var(--hint-yellow);
-  border-bottom-right-radius: 50px ;
-  border-bottom-left-radius: 50px ;
+  border-bottom-right-radius: 3.2rem;
+  border-bottom-left-radius: 3.2rem;
 }
 
 .navbar {
@@ -126,8 +126,11 @@ img {
   color: var(--gold-finger)
 }
 
-.navlist a{
+.navlist a {
   transition: 0.3s ease-in-out;
+}
+.navlist a:hover {
+  text-decoration: underline;
 }
 
 .cart-icon {
@@ -135,9 +138,11 @@ img {
   font-size: 1.2rem;
 }
 
-.navlist a:hover {
-  text-decoration: underline;
+.desktop-action .hamburger{
+  font-size: 1.5rem;
+  display: none;
 }
+
 
 .btn {
   padding: 0.8rem;
@@ -165,7 +170,7 @@ img {
 
 
 .hero-section {
-  min-height: calc(100vh-14vh);
+  min-height: 86vh;
 }
 
 content,
@@ -202,13 +207,19 @@ p {
   width: 3rem;
   aspect-ratio: 1;
   border-radius: 1rem;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   text-align: center;
   line-height: 3rem;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 
 }
 
+.content a:hover {
+  transition: 0.5s ease-in-out;
+  color: var(--gold-finger);
+  background: var(--orange-key);
+  border: 0.8px solid black;
+}
 
 /* SECTION-1 */
 
@@ -237,12 +248,7 @@ h3 {
   padding-top: 0%;
 }
 
-.content a:hover {
-  transition: 0.5s ease-in-out;
-  color: var(--gold-finger);
-  background: var(--orange-key);
-  border: 0.8px solid black;
-}
+
 
 
 /* SECTION - 2 */
@@ -466,9 +472,6 @@ h4 {
   width: 25rem;
 }
 
-/* .s-3 a{
-  background: var(--gold-finger);
-} */
 
 .s-3 a:hover {
   transition: 0.5s ease-in-out;
@@ -549,17 +552,32 @@ input[type="email"]:focus {
   color: var(--lead);
 }
 
+.mobile-footer {
+  background: var(--hint-yellow);
+  margin-top: 7rem;
+  padding-block: 4rem;
+  display: none;
+}
+
+.mobile-footer .flex {
+  align-items: flex-start;
+}
 
 
 /* MEDIA QUERIES */
+
+
+
 @media screen and (max-width: 780px) {
 
   .navlist,
   .desktop-action .btn {
     display: none;
   }
-
   .desktop-action .hamburger {
+    display: block;
+  }
+  .mobile-ham{
     display: block;
   }
 
@@ -589,17 +607,30 @@ input[type="email"]:focus {
   }
 
 
+  .hide-on-mobile {
+    display: none;
+  }
+
+  .app-image {
+    display: none;
+  }
+
+  .mobile-footer {
+    display: block;
+  }
+
+  .footer-container {
+    display: none;
+  }
 
   /* Section Styling  */
 
   h1 {
     font-size: 3.6rem;
-
   }
 
   .content {
     padding-top: 3rem;
-
   }
 
   .gap-2 {
@@ -610,4 +641,3 @@ input[type="email"]:focus {
     gap: 4rem;
   }
 
-}
